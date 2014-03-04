@@ -3,7 +3,11 @@ package com.bing.untils;
 import android.content.Context;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
-
+/**
+ * 控制图片轮播速度
+ * @author lyl
+ *
+ */
 public class FixedSpeedScroller extends Scroller{
 	
 	private int mDuration = 1000;  

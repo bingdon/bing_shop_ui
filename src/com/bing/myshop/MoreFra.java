@@ -8,10 +8,13 @@ import java.util.Map;
 import com.bing.adapter.MoreAdapter;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 public class MoreFra extends Fragment{
@@ -20,6 +23,8 @@ public class MoreFra extends Fragment{
 	private MoreAdapter moreAdapter;
 	private String[] morstr={"版本信息","意见反馈","使用帮助","清空缓存"
 			};
+	
+	
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -47,6 +52,17 @@ public class MoreFra extends Fragment{
 		morelist=(ListView)getActivity().findViewById(R.id.morelist);
 		moreAdapter=new MoreAdapter(getActivity(), getlist());
 		morelist.setAdapter(moreAdapter);
+		
+		morelist.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+				enterNew(arg2);
+			}
+		});
+		
 	}
 	
 	private List<Map<String, Object>> getlist(){
@@ -60,5 +76,32 @@ public class MoreFra extends Fragment{
 		return list;
 	}
 	
+	public void enterNew(int id){
+		
+		Intent intent=new Intent();
+		
+		switch (id) {
+		case 0:
+			intent.setClass(getActivity(), AboutVersionAcvitity.class);
+			break;
+			
+		case 1:
+			intent.setClass(getActivity(), FeedBack.class);
+			break;
+			
+			
+		case 2:
+			intent.setClass(getActivity(), UseInfo.class);
+			break;
+			
 
+		default:
+			break;
+		}
+		if (id<3) {
+			startActivity(intent);
+		}
+		
+	}
+	
 }

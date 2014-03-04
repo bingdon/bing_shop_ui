@@ -3,14 +3,123 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+    <TextView
+        android:id="@+id/goodsname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cargoodima"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/cargoodima"
+        android:text="A women" />
+
+    <TextView
+        android:id="@+id/goodsnamech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/goodsname"
+        android:layout_below="@+id/goodsname"
+        android:text="精品单一" />
+
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/goodslistline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/cargoodima"
+        android:scaleType="fitXY"
+        android:src="@drawable/cargoodsline" />
+
+    <TextView
+        android:id="@+id/goodstag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/goodssize"
+        android:layout_below="@+id/goodslistline"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="5dp"
+        android:text="总价:¥1000.00" />
+
+    <TextView
+        android:id="@+id/goodscolor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/goodssize"
+        android:layout_alignBottom="@+id/goodssize"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/goodssize"
+        android:text="颜色:紫色" />
+
+    <TextView
+        android:id="@+id/goodscounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/goodssize"
+        android:layout_below="@+id/goodssize"
+        android:text="数量:无线" />
+
+    <ImageView
+        android:id="@+id/cargoodima"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/ic_launcher" />
+        android:layout_marginLeft="24dp"
+        android:src="@drawable/image1" />
+
+    <TextView
+        android:id="@+id/goodssize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/goodsnamech"
+        android:layout_below="@+id/goodsnamech"
+        android:text="尺码:L" />
+
+    <RelativeLayout
+        android:id="@+id/cargo_left_layout"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/cargoodima"
+        android:layout_below="@+id/goodslistline"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/car_goods_btn" >
+
+        <TextView
+            android:id="@+id/cargolefttxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="付款" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cargo_right_layout"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/goodslistline"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/cargo_left_layout"
+        android:background="@drawable/car_goods_btn" >
+        
+        <TextView
+            android:id="@+id/cargorighttxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="撤单" />
+        
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cargo_left_layout" >
+    </LinearLayout>
 
 </RelativeLayout>

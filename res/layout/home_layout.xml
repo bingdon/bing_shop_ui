@@ -2,22 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-	<RelativeLayout
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true" >
 
-        <ImageView
-            android:id="@+id/twomar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="19dp"
-            android:src="@drawable/ic_launcher" />
+	<RelativeLayout
+	    android:id="@+id/title"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:background="@drawable/navbar_bg" >
 
         <TextView
             android:id="@+id/morname"
@@ -33,8 +26,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_alignTop="@+id/morname"
-            android:src="@drawable/search" />
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="28dp"
+            android:src="@drawable/search_navi" />
+
+        <ImageView
+            android:id="@+id/twomar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/scan_two_code" />
 
     </RelativeLayout>
     <RelativeLayout
@@ -76,7 +79,7 @@
     <RelativeLayout
         android:id="@+id/wmchoice"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="65dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/showlayout" >
 
@@ -99,38 +102,6 @@
             android:layout_marginRight="24dp"
             android:src="@drawable/digital" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/hotestgoods"
-            android:layout_alignParentBottom="true"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/discounts"
-            android:layout_alignParentBottom="true"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/carefa_ha"
-            android:layout_alignParentBottom="true"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/carefa_ha"
-            android:text="TextView" />
-
         <ImageView
             android:id="@+id/carefa_ha"
             android:layout_width="wrap_content"
@@ -146,8 +117,106 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="41dp"
-            android:layout_toRightOf="@+id/textView1"
+            android:layout_toRightOf="@+id/hhotsgoodstxt"
             android:src="@drawable/discounts" />
+
+        <ImageView
+            android:id="@+id/user_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/carefa_ha_txt"
+            android:src="@drawable/home_line" />
+
+        <ImageView
+            android:id="@+id/homline0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/hotestgoods"
+            android:src="@drawable/home_line" />
+
+        <TextView
+            android:id="@+id/hhotsgoodstxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hotestgoods"
+            android:layout_toLeftOf="@+id/homline0"
+            android:text="最热单品"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/carefa_ha_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/carefa_ha"
+            android:layout_below="@+id/carefa_ha"
+            android:text="美容护发"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/discounts_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/discounts"
+            android:layout_below="@+id/discounts"
+            android:text="折扣专区"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/digitals_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/digitals"
+            android:layout_below="@+id/digitals"
+            android:text="数码家电"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/hotestgoods_bel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/hhotsgoodstxt"
+            android:layout_alignParentBottom="true"
+            android:text="for woman"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/discounts_bel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/discounts_txt"
+            android:layout_alignParentBottom="true"
+            android:text="for women"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/carefa_ha_bel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/carefa_ha_txt"
+            android:layout_alignParentBottom="true"
+            android:text="for women"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/digitals_bel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/carefa_ha"
+            android:text="for man"
+            android:textSize="8sp" />
+
+        <ImageView
+            android:id="@+id/homelinec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/home_line" />
 
     </RelativeLayout>
 
@@ -155,16 +224,16 @@
         android:id="@+id/showlayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/wmchoice1"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/wmchoice" >
 
         <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
+            android:id="@+id/bingshowpic"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
             android:scaleType="fitXY"
             android:src="@drawable/homeshow0" />
 
@@ -175,43 +244,146 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" >
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/showlayout1"
+        android:layout_marginTop="10dp" >
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/womenzhuanggui"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="20dp"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/lady_counter" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/mambaby"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginRight="22dp"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/mm_baby" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/manzhuangui"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginRight="16dp"
-            android:layout_toLeftOf="@+id/imageView9"
-            android:src="@drawable/ic_launcher" />
+            android:layout_marginLeft="54dp"
+            android:layout_toRightOf="@+id/womenzhuanggui"
+            android:src="@drawable/gentel_counter" />
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/homefoods"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="33dp"
-            android:layout_toRightOf="@+id/imageView6"
-            android:src="@drawable/ic_launcher" />
+            android:layout_marginRight="45dp"
+            android:layout_toLeftOf="@+id/mambaby"
+            android:src="@drawable/famliy_food" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/womenzhuanggui"
+            android:layout_below="@+id/womenzhuanggui"
+            android:text="女士专柜"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView6"
+            android:layout_alignBottom="@+id/textView6"
+            android:layout_alignLeft="@+id/manzhuangui"
+            android:text="男士专柜"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/homefoods"
+            android:layout_alignTop="@+id/textView7"
+            android:text="家居美食"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView8"
+            android:layout_toRightOf="@+id/homefoods"
+            android:text="妈咪宝贝"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/womenzhuanggui_bel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView6"
+            android:layout_below="@+id/textView6"
+            android:text="for women"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/manzhuangui_bel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/womenzhuanggui_bel_txt"
+            android:layout_alignBottom="@+id/womenzhuanggui_bel_txt"
+            android:layout_alignLeft="@+id/textView7"
+            android:text="for man"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/homefoods_bel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/manzhuangui_bel_txt"
+            android:layout_alignBottom="@+id/manzhuangui_bel_txt"
+            android:layout_alignLeft="@+id/textView8"
+            android:text="for man"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/mambaby_bel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/homefoods_bel_txt"
+            android:layout_toRightOf="@+id/homefoods"
+            android:text="for women"
+            android:textSize="8sp" />
+
+        <ImageView
+            android:id="@+id/home_l0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/textView6"
+            android:src="@drawable/home_line" />
+
+        <ImageView
+            android:id="@+id/home_l1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/home_line" />
+
+        <ImageView
+            android:id="@+id/home_l2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/textView8"
+            android:src="@drawable/home_line" />
 
     </RelativeLayout>
 

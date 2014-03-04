@@ -3,6 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+
+    <RelativeLayout
+        android:id="@+id/kkkkkk"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
     <TextView
         android:id="@+id/morname"
         android:layout_width="wrap_content"
@@ -13,12 +21,23 @@
         android:text="TextView" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/morgoods"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="60dp"
-        android:src="@drawable/ic_launcher" />
+        android:layout_marginRight="20dp"
+        android:src="@drawable/user_mor" />
+
+    <TextView
+        android:id="@+id/morrighttxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/morgoods"
+        android:layout_marginRight="28dp"
+        android:layout_toLeftOf="@+id/morgoods"
+        android:text="TextView" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

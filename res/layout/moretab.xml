@@ -5,36 +5,60 @@
 
     <RelativeLayout
         android:id="@+id/moretitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true" >
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:src="@drawable/search" />
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar_bg" >
 
         <TextView
             android:id="@+id/morname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/imageView1"
+            android:layout_marginLeft="19dp"
+            android:layout_toRightOf="@+id/goodssearch"
             android:text="@string/more" />
+
+        <ImageView
+            android:id="@+id/goodssearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_alignTop="@+id/morname"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/search_navi" />
 
     </RelativeLayout>
 
     <ListView
         android:id="@+id/morelist"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/moretitle" >
     </ListView>
+
+    <ImageView
+        android:id="@+id/logoutcurcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/logout_btn" />
+
+    <TextView
+        android:id="@+id/hhotsgoodstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/logoutcurcode"
+        android:layout_alignLeft="@+id/logoutcurcode"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="15dp"
+        android:text="注册当前账号" />
 
 </RelativeLayout>

@@ -1,16 +1,15 @@
 package com.bing.myshop;
 
-
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.view.Menu;
+import android.graphics.Color;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends Activity implements OnClickListener {
 	//标签
@@ -24,6 +23,15 @@ public class MainActivity extends Activity implements OnClickListener {
 	private MyShopCar myShopCar;
 	//更多
 	private MoreFra moreFra;
+	//我的
+	private UserFra userFra;
+	/**
+	 * 下标
+	 */
+	private TextView mhometxt,mshopcartxt,musertxt,mmoretxt;
+	
+	private int bisque;
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +80,20 @@ public class MainActivity extends Activity implements OnClickListener {
 			break;
 			
 		case 2:
+			
+			if (userFra==null) {
+				userFra=new UserFra();
+				transaction.add(R.id.tabshow, userFra);
+				
+				
+			} else {
+				transaction.show(userFra);
+			}
+			
+			break;	
+			
+			
+		case 3:
 	
 			if (moreFra==null) {
 				moreFra=new MoreFra();
@@ -83,6 +105,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			}
 			
 			break;
+			
 
 		default:
 			break;
@@ -93,10 +116,16 @@ public class MainActivity extends Activity implements OnClickListener {
 
 
 	public void initView(){
+		
+		bisque=getResources().getColor(R.color.peachpuff);
 		hometab=(ImageView)findViewById(R.id.hometab);
 		shopcartab=(ImageView)findViewById(R.id.shopcartab);
 		usertab=(ImageView)findViewById(R.id.usertab);
 		moretab=(ImageView)findViewById(R.id.moretab);
+		mhometxt=(TextView)findViewById(R.id.mhometxt);
+		musertxt=(TextView)findViewById(R.id.musertxt);
+		mshopcartxt=(TextView)findViewById(R.id.mshopcartxt);
+		mmoretxt=(TextView)findViewById(R.id.mmoretxt);
 		hometab.setOnClickListener(this);
 		shopcartab.setOnClickListener(this);
 		usertab.setOnClickListener(this);
@@ -110,18 +139,62 @@ public class MainActivity extends Activity implements OnClickListener {
 		switch (v.getId()) {
 		case R.id.hometab:
 			settab(0);
+			
+			hometab.setImageResource(R.drawable.home_tab_sec);
+			shopcartab.setImageResource(R.drawable.car_tab);
+			usertab.setImageResource(R.drawable.user_tab);
+			moretab.setImageResource(R.drawable.more_tab);
+			
+			mhometxt.setTextColor(bisque);
+			mshopcartxt.setTextColor(Color.GRAY);
+			musertxt.setTextColor(Color.GRAY);
+			mmoretxt.setTextColor(Color.GRAY);
+			
 			break;
 			
 		case R.id.shopcartab:
 			settab(1);
+			
+			hometab.setImageResource(R.drawable.home_tab);
+			shopcartab.setImageResource(R.drawable.car_tab_sec);
+			usertab.setImageResource(R.drawable.user_tab);
+			moretab.setImageResource(R.drawable.more_tab);
+			
+			mhometxt.setTextColor(Color.GRAY);
+			mshopcartxt.setTextColor(bisque);
+			musertxt.setTextColor(Color.GRAY);
+			mmoretxt.setTextColor(Color.GRAY);
+			
 			break;
 			
 		case R.id.usertab:
 			settab(2);
+			
+			hometab.setImageResource(R.drawable.home_tab);
+			shopcartab.setImageResource(R.drawable.car_tab);
+			usertab.setImageResource(R.drawable.user_tab_sec);
+			moretab.setImageResource(R.drawable.more_tab);
+			
+			mhometxt.setTextColor(Color.GRAY);
+			mshopcartxt.setTextColor(Color.GRAY);
+			musertxt.setTextColor(bisque);
+			mmoretxt.setTextColor(Color.GRAY);
+			
 			break;
 	
 		case R.id.moretab:
-	
+			settab(3);
+			
+			hometab.setImageResource(R.drawable.home_tab);
+			shopcartab.setImageResource(R.drawable.car_tab);
+			usertab.setImageResource(R.drawable.user_tab);
+			moretab.setImageResource(R.drawable.more_tab_sec);
+			
+			mhometxt.setTextColor(Color.GRAY);
+			mshopcartxt.setTextColor(Color.GRAY);
+			musertxt.setTextColor(Color.GRAY);
+			mmoretxt.setTextColor(bisque);
+			
 			break;
 
 		default:
@@ -138,9 +211,16 @@ public class MainActivity extends Activity implements OnClickListener {
 			transaction.hide(myShopCar);
 		}
 //		
+		if (userFra!=null) {
+			transaction.hide(userFra);
+		}
+		
 		if (moreFra!=null) {
 			transaction.hide(moreFra);
 		}
+		
+		
+		
 	}
 	
 	

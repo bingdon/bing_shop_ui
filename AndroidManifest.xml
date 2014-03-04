@@ -8,6 +8,8 @@
         android:minSdkVersion="11"
         android:targetSdkVersion="18" />
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -16,11 +18,6 @@
         <activity
             android:name="com.bing.myshop.MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.bing.myshop.SearchActivity"
@@ -29,6 +26,109 @@
         <activity
             android:name="com.bing.myshop.HotsGoodsActivity"
             android:label="@string/title_activity_hots_goods" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.DeliverAddress"
+            android:label="@string/title_activity_deliver_address" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.AddressInfo"
+            android:label="@string/title_activity_address_info" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.WaitRecevieGoods"
+            android:label="@string/title_activity_wait_recevie_goods" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.AboutVersionAcvitity"
+            android:label="@string/title_activity_about_version_acvitity" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.FeedBack"
+            android:label="@string/title_activity_feed_back" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.UseInfo"
+            android:label="@string/title_activity_use_info" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.ScanTwoCodeActivity"
+            android:label="@string/title_activity_scan_two_code" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.WaitPay"
+            android:label="@string/title_activity_wait_pay" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.MyAllOrder"
+            android:label="@string/title_activity_my_all_order" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.WaitGoSen"
+            android:label="@string/title_activity_wait_go_sen" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.AttStore"
+            android:label="@string/title_activity_att_store" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.StoreInfoNext"
+            android:label="@string/title_activity_store_info_next" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.BaoBeiList"
+            android:label="@string/title_activity_bao_bei_list" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.BaobeiInfo"
+            android:label="@string/title_activity_baobei_info" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.EvaluateInfo"
+            android:label="@string/title_activity_evaluate_info" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.GoodsClassify"
+            android:label="@string/title_activity_goods_classify" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.WaitEvaluate"
+            android:label="@string/title_activity_wait_evaluate" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.UserEvaluate"
+            android:label="@string/title_activity_user_evaluate" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.UserShoucang"
+            android:label="@string/title_activity_user_shoucang" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.UserBackPay"
+            android:label="@string/title_activity_user_back_pay" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.ChatActivity"
+            android:label="@string/title_activity_chat" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.PasswordFindActivity"
+            android:label="@string/title_activity_password_find" >
+        </activity>
+        <activity
+            android:name="com.bing.myshop.WelcomeActivity"
+            android:label="@string/title_activity_welcome" android:theme="@android:style/Theme.Light.NoTitleBar">
+            
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
         </activity>
     </application>
 

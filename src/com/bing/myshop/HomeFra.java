@@ -10,14 +10,12 @@ import com.bing.untils.FixedSpeedScroller;
 
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -44,8 +42,48 @@ public class HomeFra extends Fragment implements OnClickListener{
 	private boolean taskflag=false;
 	//改变播放速度
 	FixedSpeedScroller mScroller;
+	/**
+	 * 搜索
+	 */
+	private ImageView searchView;
+	/**
+	 * 扫描二维码
+	 */
+	private ImageView scanQView;
+	/**
+	 * 最热单品
+	 */
+	private ImageView hotgoods;
+	/**
+	 * 折扣专区
+	 */
+	private ImageView discounts;
+	/**
+	 * 美容护发
+	 */
+	private ImageView care_hair;
+	/**
+	 * 数码家电
+	 */
+	private ImageView digitals;
+	/**
+	 * 女士专柜
+	 */
+	private ImageView womenzhuanggui;
+	/**
+	 * 男士专柜
+	 */
+	private ImageView manzhuangui;
+	/**
+	 * 家居没事
+	 */
+	private ImageView homefoods;
+	/**
+	 * 妈咪宝贝
+	 */
+	private ImageView mambaby;
 	
-	private ImageView hotgoods,searchView;
+	public static int TAG=0;
 	
 	@SuppressLint("NewApi")
 	@Override
@@ -66,21 +104,53 @@ public class HomeFra extends Fragment implements OnClickListener{
 		return fr0v;
 	}
 
+	
+	
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		TAG=0;
+	}
+
 	@SuppressLint("NewApi")
 	@Override
 	public void onDestroy() {
 		// TODO Auto-generated method stub
 		super.onDestroy();
 	}
-
+	/**
+	 * 初始化布局
+	 */
 	private void initMv(){
 		hotgoods=(ImageView)getActivity().findViewById(R.id.hotestgoods);
+		discounts=(ImageView)getActivity().findViewById(R.id.discounts);
+		care_hair=(ImageView)getActivity().findViewById(R.id.carefa_ha);
+		digitals=(ImageView)getActivity().findViewById(R.id.digitals);
+		womenzhuanggui=(ImageView)getActivity().findViewById(R.id.womenzhuanggui);
+		manzhuangui=(ImageView)getActivity().findViewById(R.id.manzhuangui);
+		homefoods=(ImageView)getActivity().findViewById(R.id.homefoods);
+		mambaby=(ImageView)getActivity().findViewById(R.id.mambaby);
+		
 		searchView=(ImageView)getActivity().findViewById(R.id.searchview);
+		scanQView=(ImageView)getActivity().findViewById(R.id.twomar);
+		
 		hotgoods.setOnClickListener(this);
+		discounts.setOnClickListener(this);
+		care_hair.setOnClickListener(this);
+		digitals.setOnClickListener(this);
+		womenzhuanggui.setOnClickListener(this);
+		manzhuangui.setOnClickListener(this);
+		homefoods.setOnClickListener(this);
+		mambaby.setOnClickListener(this);
+		
 		searchView.setOnClickListener(this);
+		scanQView.setOnClickListener(this);
 	}
  	
-	
+	/**
+	 * 初始化pager
+	 */
 	private void initView(){
 		mPager=(ViewPager)getActivity().findViewById(R.id.picpager);
 		
@@ -185,7 +255,7 @@ public class HomeFra extends Fragment implements OnClickListener{
 			while (taskflag) {
 				
 				
-				Log.i("Fra0", "运行:"+id);
+//				Log.i("Fra0", "运行:"+id);
 				
 				publishProgress(id);
 				try {
@@ -251,6 +321,41 @@ public class HomeFra extends Fragment implements OnClickListener{
 			looperActivity(1);
 			break;
 
+		case R.id.twomar:
+			looperActivity(3);
+			break;
+			
+		case R.id.discounts:
+			Intent intent=new Intent();
+			intent.setClass(getActivity(), GoodsClassify.class);
+			startActivity(intent);
+			break;
+			
+		case R.id.carefa_ha:
+			looperActivity(4);
+			break;
+			
+		case R.id.digitals:
+			looperActivity(4);
+			break;
+			
+		case R.id.womenzhuanggui:
+			looperActivity(4);
+			break;
+	
+		case R.id.manzhuangui:
+			looperActivity(4);
+			break;
+	
+		case R.id.homefoods:
+			looperActivity(4);
+			break;
+	
+		case R.id.mambaby:
+			looperActivity(4);
+			break;
+	
+			
 		default:
 			break;
 		}
@@ -260,13 +365,20 @@ public class HomeFra extends Fragment implements OnClickListener{
 		Intent intent=new Intent();
 		switch (posion) {
 		case 0:
-			intent.setClass(getActivity(),HotsGoodsActivity.class);
+			intent.setClass(getActivity(),BaoBeiList.class);
+			TAG=1;
 			break;
 			
 		case 1:
 			intent.setClass(getActivity(),SearchActivity.class);
 			break;
 
+		case 3:
+			intent.setClass(getActivity(), ScanTwoCodeActivity.class);
+			break;
+			
+		case 4:
+			intent.setClass(getActivity(), GoodsClassify.class);
 		default:
 			break;
 		}

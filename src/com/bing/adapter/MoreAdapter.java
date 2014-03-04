@@ -12,7 +12,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+/**
+ * 更多容器适配、分类
+ * @author lyl
+ *
+ */
 public class MoreAdapter extends BaseAdapter{
 
 	private LayoutInflater listContainer; 
@@ -20,6 +24,7 @@ public class MoreAdapter extends BaseAdapter{
 	
 	public final class ViewHoder{
 		TextView morname;
+		TextView righttxt;
 		ImageView tag;
 	}
 	
@@ -54,11 +59,12 @@ public class MoreAdapter extends BaseAdapter{
 			viewHoder=new ViewHoder();
 			convertView=listContainer.inflate(R.layout.morelist, null);
 			viewHoder.morname=(TextView)convertView.findViewById(R.id.morname);
+			viewHoder.righttxt=(TextView)convertView.findViewById(R.id.morrighttxt);
 			convertView.setTag(viewHoder);
 		} else {
 			viewHoder=(ViewHoder)convertView.getTag();
 		}
-		
+		viewHoder.righttxt.setVisibility(View.INVISIBLE);
 		viewHoder.morname.setText((String)listItems.get(position).get("morename"));
 		return convertView;
 	}

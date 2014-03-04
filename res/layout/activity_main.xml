@@ -17,45 +17,96 @@
     <RelativeLayout
         android:id="@+id/tabkalayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" >
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/mainbar_bg" >
+
+        <ImageView
+            android:id="@+id/moretab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/usertab"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="21dp"
+            android:src="@drawable/more_tab" />
 
         <ImageView
             android:id="@+id/hometab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="26dp"
-            android:src="@drawable/ic_launcher" />
-
-        <ImageView
-            android:id="@+id/shopcartab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="38dp"
-            android:layout_toRightOf="@+id/hometab"
-            android:src="@drawable/ic_launcher" />
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="false"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/home_tab_sec" />
 
         <ImageView
             android:id="@+id/usertab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="34dp"
-            android:layout_toRightOf="@+id/shopcartab"
-            android:src="@drawable/ic_launcher" />
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="58dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/moretab"
+            android:src="@drawable/user_tab" />
 
         <ImageView
-            android:id="@+id/moretab"
+            android:id="@+id/shopcartab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="44dp"
-            android:layout_toRightOf="@+id/usertab"
-            android:src="@drawable/ic_launcher" />
+            android:layout_above="@+id/mshopcartxt"
+            android:layout_marginLeft="70dp"
+            android:layout_toRightOf="@+id/hometab"
+            android:src="@drawable/car_tab" />
+        
+        <TextView
+            android:id="@+id/mhometxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/hometab"
+            android:layout_below="@+id/hometab"
+            android:layout_marginLeft="4dp"
+            android:text="首页"
+            android:textColor="@color/peachpuff"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/mmoretxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/musertxt"
+            android:layout_alignBottom="@+id/musertxt"
+            android:layout_alignLeft="@+id/moretab"
+            android:layout_marginLeft="4dp"
+            android:text="更多"
+            android:textColor="@color/gainsboro"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/mshopcartxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/mhometxt"
+            android:layout_alignBottom="@+id/mhometxt"
+            android:layout_alignLeft="@+id/shopcartab"
+            android:text="购物车"
+            android:textColor="@color/gainsboro"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/musertxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/mshopcartxt"
+            android:layout_alignBottom="@+id/mshopcartxt"
+            android:layout_alignLeft="@+id/usertab"
+            android:layout_marginLeft="4dp"
+            android:text="我的"
+            android:textColor="@color/gainsboro"
+            android:textSize="9sp" />
 
     </RelativeLayout>
 

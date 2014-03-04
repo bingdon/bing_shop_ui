@@ -5,26 +5,30 @@
 
     <RelativeLayout
         android:id="@+id/shopcarlayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true" >
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher" />
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar_bg" >
 
         <TextView
-            android:id="@+id/morname"
+            android:id="@+id/shopcarname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="23dp"
-            android:layout_toRightOf="@+id/imageView1"
+            android:layout_toRightOf="@+id/goodsedit"
             android:text="@string/shopcar" />
+
+        <ImageView
+            android:id="@+id/goodsedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/cargoodsedit" />
 
     </RelativeLayout>
 
