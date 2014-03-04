@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/shoucanglist_goods_head_ima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/image1" />
+
+    <TextView
+        android:id="@+id/shoucanglist_goods_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/shoucanglist_goods_head_ima"
+        android:layout_marginLeft="33dp"
+        android:layout_toRightOf="@+id/shoucanglist_goods_head_ima"
+        android:text="夹克" />
+
+    <TextView
+        android:id="@+id/shoucanglist_goods_shoucang_num_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/shoucanglist_goods_name_txt"
+        android:layout_below="@+id/shoucanglist_goods_name_txt"
+        android:layout_marginTop="14dp"
+        android:text="收藏：2200" />
+
+    <TextView
+        android:id="@+id/shoucanglist_goods_price_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/shoucanglist_goods_head_ima"
+        android:layout_alignLeft="@+id/shoucanglist_goods_shoucang_num_txt"
+        android:text="¥ 699.00" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/shoucanglist_goods_head_ima" >
+    </LinearLayout>
+
+</RelativeLayout>

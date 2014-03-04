@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoreInfoNext" >
+
+    <RelativeLayout
+        android:id="@+id/store_info_next_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar_bg" >
+
+        <ImageView
+            android:id="@+id/store_info_next_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/return_icon" />
+
+        <TextView
+            android:id="@+id/store_info_next_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/store_info_next_back"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@+id/store_info_next_back"
+            android:text="@string/title_activity_store_info_next" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/store_info_next_store_ima_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/store_info_next_title_layout"
+        android:background="@drawable/store_head_bg" >
+
+        <ImageView
+            android:id="@+id/store_info_next_store_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/attstore_head" />
+
+        <ImageView
+            android:id="@+id/store_info_next_att_ima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/store_info_next_store_head"
+            android:layout_marginRight="60dp"
+            android:src="@drawable/att_icon" />
+
+        <TextView
+            android:id="@+id/store_info_next_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/store_info_next_store_head"
+            android:layout_marginRight="17dp"
+            android:text="加关注"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/store_info_next_storename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/store_info_next_store_ima_layout"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="17dp"
+        android:text="TextView" />
+
+    <ListView
+        android:id="@+id/store_info_next_all_go_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/store_info_next_storename" >
+    </ListView>
+
+</RelativeLayout>

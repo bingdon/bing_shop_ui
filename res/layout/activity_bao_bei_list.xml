@@ -1,0 +1,230 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BaoBeiList" >
+
+    <RelativeLayout
+        android:id="@+id/baobei_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar_bg" >
+
+        <ImageView
+            android:id="@+id/baobei_list_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/return_icon" />
+
+        <TextView
+            android:id="@+id/baobei_list_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/baobei_list_back"
+            android:layout_marginLeft="21dp"
+            android:layout_toRightOf="@+id/baobei_list_back"
+            android:text="@string/baobeilist"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/baobeilist_shoucang_ima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/shoucang_btn" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/baobeilisttab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/baobei_title_layout" >
+
+        <RelativeLayout
+            android:id="@+id/baobeilistsumlayout"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="false"
+            android:background="@drawable/baobeilisttabbar_sec" >
+
+            <RelativeLayout
+                android:id="@+id/baobeilistsumlayoutson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/baobeilist_sum_ima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/baobeilist_sum" />
+
+                <TextView
+                    android:id="@+id/baobeilist_sum_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/baobeilist_sum_ima"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/baobeilist_sum_ima"
+                    android:text="@string/sum"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/baobeilistsaleslayout"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/baobeilistsumlayout"
+            android:background="@drawable/baobeilisttabbar" >
+
+            <RelativeLayout
+                android:id="@+id/baobeilistsaleslayoutson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                
+                  <ImageView
+                android:id="@+id/baobeilist_sales_ima"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+                android:src="@drawable/baobeilist_sales" />
+                
+                 <TextView
+                     android:id="@+id/baobeilist_sales_txt"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:layout_marginLeft="2dp"
+                     android:layout_toRightOf="@+id/baobeilist_sales_ima"
+                     android:text="@string/sales"
+                     android:textColor="@color/white" />
+                
+            </RelativeLayout>
+          
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/baobeilistpricelayout"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/baobeilistsaleslayout"
+            android:background="@drawable/baobeilisttabbar" >
+
+            <RelativeLayout
+                android:id="@+id/baobeilistpricelayoutson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/baobeilist_price_ima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/baobeillist_price" />
+                
+                
+                
+ 			 <TextView
+                android:id="@+id/baobeilist_price_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/baobeilist_price_ima"
+                android:text="@string/price"
+                android:textColor="@color/white" />
+                
+            </RelativeLayout>
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/baobeilisthonorlayout"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/baobeilistpricelayout"
+            android:background="@drawable/baobeilisttabbar" >
+
+            <RelativeLayout
+                android:id="@+id/baobeilisthonorlayoutson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                 <ImageView
+                android:id="@+id/baobeilist_honor_ima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/baobeilist_honor" />
+                 
+                 <TextView
+                android:id="@+id/baobeilist_honor_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/baobeilist_honor_ima"
+                android:text="@string/honor"
+                android:textColor="@color/white" />
+                 
+                
+            </RelativeLayout>
+            
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/baobeilistpagerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/baobeilisttab"
+        android:orientation="vertical" >
+        
+        <android.support.v4.view.ViewPager
+            android:id="@+id/baobeilistpager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" >
+        </android.support.v4.view.ViewPager>
+        
+    </LinearLayout>
+
+</RelativeLayout>

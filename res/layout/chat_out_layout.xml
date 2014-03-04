@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+      <TextView
+          android:id="@+id/chat_out_date_txt"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="0dp"
+          android:text="12:40" />
+    
+    <RelativeLayout
+        android:id="@+id/chat_out_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp" >
+
+    <ImageView
+        android:id="@+id/chat_out_user_head_ima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/chat_out_word_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/chat_out_user_head_ima"
+        android:background="@drawable/chatto_bg_normal"
+        android:maxWidth="200dp"
+        android:text="TextView"
+        android:textSize="15sp" />
+
+    <ProgressBar
+        android:id="@+id/chat_out_pro"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/chat_out_word_txt"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/chat_out_word_txt" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

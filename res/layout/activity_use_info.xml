@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UseInfo" >
+
+    <RelativeLayout
+        android:id="@+id/useinfo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar_bg" >
+
+        <ImageView
+            android:id="@+id/useinfoback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:src="@drawable/return_icon" />
+
+        <TextView
+            android:id="@+id/useinfotxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/useinfoback"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/useinfoback"
+            android:text="@string/useinfo" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/titiletxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/useinfo_layout"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="25dp"
+        android:text="1、标题" />
+
+    <TextView
+        android:id="@+id/use_info_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/titiletxt"
+        android:layout_below="@+id/titiletxt"
+        android:layout_marginTop="27dp"
+        android:text="TextView" />
+
+</RelativeLayout>

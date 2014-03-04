@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity" >
+
+    <RelativeLayout
+        android:id="@+id/login_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar_bg" >
+
+        <TextView
+            android:id="@+id/login_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/title_activity_login"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/login_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/login_title_txt"
+            android:layout_alignBottom="@+id/login_title_txt"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="19dp"
+            android:text="@string/register"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/login_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/login_title_layout"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/phonenumber" />
+
+    <EditText
+        android:id="@+id/login_number_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/login_number"
+        android:layout_alignBottom="@+id/login_number"
+        android:layout_marginLeft="21dp"
+        android:layout_toRightOf="@+id/login_number"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/login_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login_number"
+        android:layout_below="@+id/login_number_edit"
+        android:layout_marginTop="30dp"
+        android:text="@string/password" />
+
+    <EditText
+        android:id="@+id/login_password_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/login_password"
+        android:layout_alignLeft="@+id/login_number_edit"
+        android:password="true"
+        android:ems="10" />
+
+    <RelativeLayout
+        android:id="@+id/login_password_find_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/login_number_edit"
+        android:layout_below="@+id/login_password_edit"
+        android:layout_marginTop="18dp" >
+
+        <TextView
+            android:id="@+id/password_find_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/passwordfind" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_bel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:clickable="true"
+        android:background="@drawable/baobeiinfo_addshop_sele" >
+
+        <TextView
+            android:id="@+id/login_bel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_activity_login"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

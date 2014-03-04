@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EvaluateInfo" >
+
+    <RelativeLayout
+        android:id="@+id/evaluateinfo_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar_bg" >
+
+        <ImageView
+            android:id="@+id/evaluateinfo_back_ima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="19dp"
+            android:src="@drawable/return_icon" />
+
+        <TextView
+            android:id="@+id/evaluateinfo_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/evaluateinfo_back_ima"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/evaluateinfo_back_ima"
+            android:text="@string/title_activity_evaluate_info"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/evaluateinfo_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/evaluateinfo_title_layout" >
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScanTwoCodeActivity" >
+
+    <RelativeLayout
+        android:id="@+id/scan_t_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar_bg" >
+
+        <ImageView
+            android:id="@+id/scan_t_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/return_icon" />
+
+        <TextView
+            android:id="@+id/scan_t_titile_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/scan_t_back"
+            android:layout_marginLeft="26dp"
+            android:layout_toRightOf="@+id/scan_t_back"
+            android:text="@string/scan_title" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/scan_camera_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/scan_t_title_layout" >
+
+        <com.bing.view.ScanView
+            android:id="@+id/scanView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/scan_bel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:background="@drawable/scan_bel_bg" >
+
+        <TextView
+            android:id="@+id/scan_bel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/scan_bel_txt" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

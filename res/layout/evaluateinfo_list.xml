@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/evaluate_user_head_ima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/img1" />
+
+    <TextView
+        android:id="@+id/evaluate_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/evaluate_user_head_ima"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/evaluate_user_head_ima"
+        android:text="Mai.k" />
+
+    <ImageView
+        android:id="@+id/evaluate_user_shoucang_ima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/evaluate_user_name"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/shoucang" />
+
+    <TextView
+        android:id="@+id/evaluate_user_main_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/evaluate_user_name"
+        android:layout_below="@+id/evaluate_user_shoucang_ima"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="14dp"
+        android:text="衣服不错，感觉穿上去好卡哇伊的样子，喜欢！"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/evaluate_goodsinfo_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/evaluate_user_head_ima"
+        android:layout_alignLeft="@+id/evaluate_user_main_txt"
+        android:text="尺码:L 颜色：不关心 "
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/evaluate_goodsinfo_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/evaluate_goodsinfo_txt"
+        android:layout_alignBottom="@+id/evaluate_goodsinfo_txt"
+        android:layout_alignRight="@+id/evaluate_user_shoucang_ima"
+        android:text="2014.02.23"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/evaluate_user_head_ima"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</RelativeLayout>

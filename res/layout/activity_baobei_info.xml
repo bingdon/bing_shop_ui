@@ -1,0 +1,307 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BaobeiInfo" >
+
+    <RelativeLayout
+        android:id="@+id/baobei_info_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar_bg" >
+
+        <ImageView
+            android:id="@+id/baobei_info_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/return_icon" />
+
+        <TextView
+            android:id="@+id/baobei_info_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/baobei_info_back"
+            android:text="@string/title_activity_baobei_info"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/baobei_info_goods_ima"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/baobei_info_title_layout"
+        android:scaleType="fitXY"
+        android:src="@drawable/baobei_ima0" />
+
+    <RelativeLayout
+        android:id="@+id/baobeiinfo_bel0"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/baobei_info_goods_ima"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/baobeiinfo_goodsname_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="卫衣" />
+
+        <ImageView
+            android:id="@+id/baobeiinfo_shoucang_ima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/shoucang" />
+
+        <TextView
+            android:id="@+id/baobeiinfo_shoucang_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/baobeiinfo_shoucang_ima"
+            android:layout_below="@+id/baobeiinfo_shoucang_ima"
+            android:layout_marginTop="2dp"
+            android:text="收藏"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/baobeiinfo_shoucang_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/baobeiinfo_shoucang_ima"
+            android:src="@drawable/home_line" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/baibeiinfo_bel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/baobeiinfo_bel0" >
+
+        <TextView
+            android:id="@+id/baobeiinfo_price_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="¥ 699.00" />
+
+        <TextView
+            android:id="@+id/baobeiinfo_tag_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/baobeiinfo_youhui_bg"
+            android:text="优惠"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/baobeiinfo_bel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/baibeiinfo_bel1" >
+
+        <TextView
+            android:id="@+id/baobeiinfo_post_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:text="广州-北京 免邮费" />
+
+        <TextView
+            android:id="@+id/baobeiinfo_sales_renqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="15dp"
+            android:text="月销：44笔 人气：1000" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/baobeiinfo_bel3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/baobeiinfo_bel2" >
+
+        <TextView
+            android:id="@+id/baobeiinfo_evaluate_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="宝贝评价" />
+
+        <ImageView
+            android:id="@+id/baobeiinfo_evaluate_mor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/user_mor" />
+
+        <TextView
+            android:id="@+id/baobeiinfo_evaluate_num_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/baobeiinfo_evaluate_mor"
+            android:layout_marginRight="11dp"
+            android:layout_toLeftOf="@+id/baobeiinfo_evaluate_mor"
+            android:text="30个" />
+
+        <ImageView
+            android:id="@+id/baobeiinfo_evalute_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/baobeiinfo_evaluate_txt"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="false"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/cargoodsline" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/baibeiinfo_bel4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/baobeiinfo_bel3" >
+
+        <TextView
+            android:id="@+id/baobeiinfo_store_info_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="店铺信息" />
+
+        <ImageView
+            android:id="@+id/baobeiinfo_store_mor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/user_mor" />
+
+        <TextView
+            android:id="@+id/baobeiinfo_store_yyk_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/baobeiinfo_store_mor"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/baobeiinfo_store_mor"
+            android:text="优衣库" />
+
+        <ImageView
+            android:id="@+id/baobeiinfo_store_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/baobeiinfo_store_info_txt"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/cargoodsline" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/baobeiinfo_bel5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <RelativeLayout
+            android:id="@+id/baobeiinfo_buy_layout"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:background="@drawable/baobeiinfo_buy_selec" >
+
+            <ImageView
+                android:id="@+id/baobeiinfo_buy_ima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="34dp"
+                android:src="@drawable/baobeiinfo_buy_icon" />
+
+            <TextView
+                android:id="@+id/baobeiinfo_buy_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@+id/baobeiinfo_buy_ima"
+                android:text="@string/fastbuy"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/baobeiinfo_addshop_layout"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:background="@drawable/baobeiinfo_addshop_sele" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:layout_toLeftOf="@+id/baobeiinfo_addshop_txt"
+                android:src="@drawable/baobeiinfo_addshop_iocn" />
+
+            <TextView
+                android:id="@+id/baobeiinfo_addshop_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:text="@string/addshop"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

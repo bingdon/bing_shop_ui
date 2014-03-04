@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutVersionAcvitity" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/logo" >
+
+        <ImageView
+            android:id="@+id/about_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/return_icon" />
+
+        <TextView
+            android:id="@+id/abouttxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/about_back"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@+id/about_back"
+            android:text="@string/aboutver" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/logolow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logolow" />
+
+    <TextView
+        android:id="@+id/companynametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:text="上品购物" />
+
+    <TextView
+        android:id="@+id/newestvertxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/companynametxt"
+        android:layout_alignRight="@+id/companynametxt"
+        android:layout_marginBottom="21dp"
+        android:text="最新版本" />
+
+    <TextView
+        android:id="@+id/nowvertxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/newestvertxt"
+        android:layout_alignLeft="@+id/newestvertxt"
+        android:layout_marginBottom="20dp"
+        android:text="当前版本" />
+
+</RelativeLayout>

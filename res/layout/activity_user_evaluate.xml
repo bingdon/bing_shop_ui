@@ -1,0 +1,217 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserEvaluate" >
+
+    <RelativeLayout
+        android:id="@+id/user_evaluate_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar_bg" >
+
+        <ImageView
+            android:id="@+id/user_evaluate_back_ima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/return_icon" />
+
+        <TextView
+            android:id="@+id/user_evaluate_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/user_evaluate_back_ima"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/user_evaluate_back_ima"
+            android:text="@string/title_activity_user_evaluate"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/user_evaluate_goods_ima"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_evaluate_title_layout"
+        android:scaleType="fitXY"
+        android:src="@drawable/baobei_ima0" />
+
+    <TextView
+        android:id="@+id/user_evaluate_goods_nme_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_evaluate_goods_ima"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="36dp"
+        android:layout_marginLeft="27dp"
+        android:text="卫衣"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/user_evaluate_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_evaluate_goods_ima" >
+
+        <RelativeLayout
+            android:id="@+id/user_evaluate_haoping_layout"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/baobeilisttabbar" >
+
+            <LinearLayout
+                android:id="@+id/user_evaluate_haoping_layout_son"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+               
+
+                <ImageView
+                    android:id="@+id/user_evaluate_haoping_ima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/haoping_ima" />
+                
+                 <TextView
+                     android:id="@+id/user_evaluate_haoping_txt"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="@string/haoping"
+                     android:textColor="@color/white" />
+                
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/user_evaluate_zhongping_layout"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+             android:background="@drawable/baobeilisttabbar"
+            android:layout_toRightOf="@+id/user_evaluate_haoping_layout" >
+
+            <LinearLayout
+                android:id="@+id/user_evaluate_zhongping_layout_son"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/user_evaluate_zhongping_ima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/zhongping_ima" />
+                
+                <TextView
+                    android:id="@+id/user_evaluate_zhongping_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zhongping"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/user_evaluate_chaping_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/user_evaluate_zhongping_layout"
+            android:background="@drawable/baobeilisttabbar" >
+
+            <LinearLayout
+                android:id="@+id/user_evaluate_chaping_layoutson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+
+                <ImageView
+                    android:id="@+id/user_evaluate_chaping_ima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chaping_ima" />
+                
+                <TextView
+                    android:id="@+id/user_evaluate_chaping_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="差评"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/user_evaluate_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/user_evaluate_tab_layout"
+        android:layout_marginTop="51dp"
+        android:ems="10"
+        android:hint="@string/evaluateeidtguid" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageView
+        android:id="@+id/daiding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_evaluate_goods_nme_txt"
+        android:layout_below="@+id/user_evaluate_edit"
+        android:layout_marginTop="33dp"
+        android:src="@drawable/xing3" />
+
+    <RelativeLayout
+        android:id="@+id/user_evaluate_commit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/baobeiinfo_addshop_sele"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/user_evaluate_commit_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@+id/user_evaluate_commit_ima"
+            android:text="提交评价"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/user_evaluate_commit_ima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="114dp"
+            android:src="@drawable/commit_icon" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

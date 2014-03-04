@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/baobeiadapter_baobei_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/baobei_ima0" />
+
+    <TextView
+        android:id="@+id/baobeiadapter_baobei_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/baobeiadapter_baobei_head"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/baobeiadapter_baobei_head"
+        android:text="A shirt
+衬衣" />
+
+    <TextView
+        android:id="@+id/baobeiadapter_baobei_sales_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/baobeiadapter_baobei_name_txt"
+        android:layout_below="@+id/baobeiadapter_baobei_name_txt"
+        android:layout_marginTop="10dp"
+        android:text="月销量:2件" />
+
+    <TextView
+        android:id="@+id/baobeiadapter_baobei_price_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/baobeiadapter_baobei_head"
+        android:layout_alignLeft="@+id/baobeiadapter_baobei_sales_txt"
+        android:text="¥ 699.00" />
+
+    <ImageView
+        android:id="@+id/baobeiadapter_baobei_honor_ima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/baobeiadapter_baobei_price_txt"
+        android:layout_marginRight="39dp"
+        android:src="@drawable/attstore_xing" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/baobeiadapter_baobei_head"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/baobeiadaoter_goods_tag_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/baobeiadapter_baobei_head"
+        android:layout_alignTop="@+id/baobeiadapter_baobei_head"
+        android:background="@drawable/hots_goods_tag" >
+
+    </RelativeLayout>
+
+</RelativeLayout>

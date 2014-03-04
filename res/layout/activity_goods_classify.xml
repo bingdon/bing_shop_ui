@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GoodsClassify" >
+
+    <RelativeLayout
+        android:id="@+id/GoodsClassify_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navbar_bg" >
+
+        <ImageView
+            android:id="@+id/goodsclassesify_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/return_icon" />
+
+        <TextView
+            android:id="@+id/goodsclassesify_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/goodsclassesify_back"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@+id/goodsclassesify_back"
+            android:text="@string/title_activity_goods_classify"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/goodsclassesify_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/GoodsClassify_title_layout" >
+    </ListView>
+
+</RelativeLayout>
