@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 /**
- * 聊天适配器
+ * 聊天适配噄1�7
  * @author lyl
  *
  */
@@ -59,26 +59,30 @@ public class ChatAdapter extends BaseAdapter {
 		// TODO Auto-generated method stub
 		ViewHolder viewHolder;
 			viewHolder=new ViewHolder();
-			if (list.get(arg0).equals("IN")) {
-				arg1=inflater.inflate(R.layout.chat_in_layout, null);
-				viewHolder.userhead=(ImageView)arg1.findViewById(R.id.chat_in_user_head_ima);
-				viewHolder.time=(TextView)arg1.findViewById(R.id.chat_in_date_txt);
-				viewHolder.word=(TextView)arg1.findViewById(R.id.chat_in_word_txt);
-				viewHolder.sendPro=(ProgressBar)arg1.findViewById(R.id.chat_in_pro);
-				
-				viewHolder.time.setText((String)list.get(arg0).get("time"));
-				viewHolder.word.setText((String)list.get(arg0).get("word"));
+			if (arg1==null) {
+				if (list.get(arg0).equals("IN")) {
+					arg1=inflater.inflate(R.layout.chat_in_layout, null);
+					viewHolder.userhead=(ImageView)arg1.findViewById(R.id.chat_in_user_head_ima);
+					viewHolder.time=(TextView)arg1.findViewById(R.id.chat_in_date_txt);
+					viewHolder.word=(TextView)arg1.findViewById(R.id.chat_in_word_txt);
+					viewHolder.sendPro=(ProgressBar)arg1.findViewById(R.id.chat_in_pro);
+					arg1.setTag(viewHolder);
+					
+				} else {
+					arg1=inflater.inflate(R.layout.chat_out_layout, null);
+					viewHolder.userhead=(ImageView)arg1.findViewById(R.id.chat_out_user_head_ima);
+					viewHolder.time=(TextView)arg1.findViewById(R.id.chat_out_date_txt);
+					viewHolder.word=(TextView)arg1.findViewById(R.id.chat_out_word_txt);
+					viewHolder.sendPro=(ProgressBar)arg1.findViewById(R.id.chat_out_pro);
+					arg1.setTag(viewHolder);
+					
+				}
 			} else {
-				arg1=inflater.inflate(R.layout.chat_out_layout, null);
-				viewHolder.userhead=(ImageView)arg1.findViewById(R.id.chat_out_user_head_ima);
-				viewHolder.time=(TextView)arg1.findViewById(R.id.chat_out_date_txt);
-				viewHolder.word=(TextView)arg1.findViewById(R.id.chat_out_word_txt);
-				viewHolder.sendPro=(ProgressBar)arg1.findViewById(R.id.chat_out_pro);
-				
-				viewHolder.time.setText((String)list.get(arg0).get("gettime"));
-				viewHolder.word.setText((String)list.get(arg0).get("getwords"));
-				
+				viewHolder=(ViewHolder)arg1.getTag();
 			}
+			
+			viewHolder.time.setText((String)list.get(arg0).get("gettime"));
+			viewHolder.word.setText((String)list.get(arg0).get("getwords"));
 		
 		return arg1;
 	}
